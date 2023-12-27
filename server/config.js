@@ -25,7 +25,7 @@ const isSSL = sslKey && sslCert;
  */
 function getLocalWebSocketURL() {
     const protocol = isSSL ? "wss" : "ws";
-    const host = hostname || "localhost";
+    const host = hostname || "0.0.0.0";
     return `${protocol}://${host}:${port}`;
 }
 
